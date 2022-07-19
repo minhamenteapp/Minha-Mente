@@ -33,55 +33,9 @@ class _DoLoginState extends State<DoLogin> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'images/logo.png',
-                scale: 2.0,
-              ),
-              SizedBox(
-                width: 10.0,
-                height: 130.0,
-                child: Card(
-                  child: Text(''),
-                  color: Theme.of(context).colorScheme.secondary,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(2.0)),
-                ),
-              ),
-              Column(
-                children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'MINHA',
-                      style: TextStyle(
-                        fontSize: _fontSizeTitle,
-                        color: Theme.of(context).colorScheme.tertiary,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Raleway',
-                        letterSpacing: 1.5,
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'MENTE',
-                      style: TextStyle(
-                        fontSize: _fontSizeTitle,
-                        color: Theme.of(context).colorScheme.tertiary,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Raleway',
-                        letterSpacing: 1.5,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
+          Image.asset(
+            'images/logo.png',
+            scale: 5.0,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 10.0, left: 20.0, right: 20.0),
@@ -132,52 +86,6 @@ class _DoLoginState extends State<DoLogin> {
                 child: Text('Acessar'),
                 style: _btnStyle,
                 onPressed: () {
-                  // final String user = _userController.text;
-                  // final String password = _passwordController.text;
-                  // if(_dao.verifyUser(user, password) == 0) {
-                  //   AlertDialog(
-                  //     title: const Text('Erro ao fazer Login'),
-                  //     content: SingleChildScrollView(
-                  //       child: Text('Preencha as informações!'),
-                  //     ),
-                  //     actions: [
-                  //       TextButton(
-                  //         onPressed: () {Navigator.of(context).pop();},
-                  //         child: const Text('Ok'),
-                  //       )
-                  //     ],
-                  //   );
-                  // }else if (_dao.verifyUser(user, password) == 1) {
-                  //   Navigator.of(context).push(MaterialPageRoute(
-                  //     builder: (context) => ProjectsList(),
-                  //   ));
-                  // } else if (_dao.verifyUser(user, password) == 2) {
-                  //   AlertDialog(
-                  //     title: const Text('Erro ao fazer Login'),
-                  //     content: SingleChildScrollView(
-                  //       child: Text('Senha incorreta!'),
-                  //     ),
-                  //     actions: [
-                  //       TextButton(
-                  //         onPressed: () {Navigator.of(context).pop();},
-                  //         child: const Text('Ok'),
-                  //       )
-                  //     ],
-                  //   );
-                  // } else {
-                  //   AlertDialog(
-                  //     title: const Text('Erro ao fazer Login'),
-                  //     content: SingleChildScrollView(
-                  //       child: Text('O usuário não existe!'),
-                  //     ),
-                  //     actions: [
-                  //       TextButton(
-                  //         onPressed: () {Navigator.of(context).pop();},
-                  //         child: const Text('Ok'),
-                  //       )
-                  //     ],
-                  //   );
-                  // }
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => ProjectsList(),
                   ));

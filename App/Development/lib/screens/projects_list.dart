@@ -23,7 +23,7 @@ class _ProjectsListState extends State<ProjectsList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(250, 250, 250, 1),
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -219,7 +219,7 @@ class _ProjectsListState extends State<ProjectsList> {
                 ),
                 Expanded(
                   flex: 25,
-                  child: Text('Hello'),
+                  child: Text(''),
                 ),
               ],
             ),
@@ -289,6 +289,7 @@ class ProjectItem extends StatelessWidget {
           project.name,
           style: TextStyle(
             fontSize: 16.0,
+            fontWeight: FontWeight.w700,
             color: Theme.of(context).colorScheme.tertiary,
           ),
         ),
@@ -296,13 +297,14 @@ class ProjectItem extends StatelessWidget {
           project.info,
           style: TextStyle(
             fontSize: 12.0,
+            fontWeight: FontWeight.w600,
             color: Theme.of(context).colorScheme.secondary,
           ),
         ),
         trailing: IconButton(
           icon: Icon(Icons.delete),
           iconSize: _iconSize,
-          color: Colors.red[700],
+          color: Colors.red[300],
           alignment: Alignment.centerRight,
           padding: const EdgeInsets.only(top: 17.0),
           onPressed: () {
@@ -316,7 +318,7 @@ class ProjectItem extends StatelessWidget {
         onTap: () {
           _SendNameOfProject(context);
         },
-        tileColor: Theme.of(context).colorScheme.primary,
+        tileColor: Color.fromRGBO(107, 127, 242, 0.8),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
       ),
     );
@@ -346,6 +348,7 @@ class _TeamItem extends StatelessWidget {
           team.teamName,
           style: TextStyle(
             fontSize: 14.0,
+            fontWeight: FontWeight.w700,
             color: Theme.of(context).colorScheme.tertiary,
           ),
         ),
@@ -353,13 +356,14 @@ class _TeamItem extends StatelessWidget {
           team.teamInfo,
           style: TextStyle(
             fontSize: 11.0,
+            fontWeight: FontWeight.w600,
             color: Theme.of(context).colorScheme.secondary,
           ),
         ),
         onTap: () {
           _SendNameOfTeam(context);
         },
-        tileColor: Theme.of(context).colorScheme.primary,
+        tileColor: Color.fromRGBO(107, 127, 242, 0.7),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
       ),
     );

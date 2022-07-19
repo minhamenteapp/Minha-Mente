@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minha_mente/screens/login.dart';
 import 'package:minha_mente/screens/projects_list.dart';
 
 void main() {
@@ -17,18 +18,14 @@ class MinhaMente extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Color.fromRGBO(3, 28, 50, 1),
         colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: Color.fromRGBO(3, 28, 50, 1),
-          secondary: Color.fromRGBO(235, 202, 202, 1),
-          tertiary: Color.fromRGBO(179, 54, 91, 1),
+          primary: Color.fromRGBO(107, 127, 242, 1),
+          secondary: Color.fromRGBO(240, 242, 242, 1),
+          tertiary: Color.fromRGBO(65, 92, 242, 1),
         ),
-        buttonTheme: ButtonThemeData(
-          buttonColor: Color.fromRGBO(179, 54, 91, 1),
-        ),
-        scaffoldBackgroundColor: Color.fromRGBO(3, 28, 50, 1),
+        scaffoldBackgroundColor: Color.fromRGBO(240, 242, 242, 1),
       ),
-      home: ProjectsList(),
+      home: DoLogin(),
       //doLogin(),
     );
   }

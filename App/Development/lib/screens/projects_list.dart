@@ -56,7 +56,7 @@ class _ProjectsListState extends State<ProjectsList> {
       body: new Builder(
         builder: (BuildContext context) {
           return Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 5.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -67,7 +67,7 @@ class _ProjectsListState extends State<ProjectsList> {
                     children: [
                       Expanded(
                         child: Text(
-                          'Seus Projetos',
+                          'Projetos',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 11.0,
@@ -137,7 +137,7 @@ class _ProjectsListState extends State<ProjectsList> {
                     children: [
                       Expanded(
                         child: Text(
-                          'Suas Equipes',
+                          'Equipes',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 11.0,
@@ -219,7 +219,14 @@ class _ProjectsListState extends State<ProjectsList> {
                 ),
                 Expanded(
                   flex: 25,
-                  child: Text(''),
+                  child: Container(
+                    alignment: Alignment.topLeft,
+                    child: Text('Arquivos',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 11.0,
+                        )),
+                  ),
                 ),
               ],
             ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:minha_mente/screens/login.dart';
-import 'package:minha_mente/screens/projects_list.dart';
 
 void main() {
   runApp(const MinhaMente());
